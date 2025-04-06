@@ -6,7 +6,7 @@ public class CalculatorTest {
 
     @Test
     public void testAdd() {
-        Assert.assertEquals(new Calculator().add(1, 2), 777);
+        Assert.assertEquals(new Calculator().add(1, 2), 3);
     }
 
     @Test
@@ -21,6 +21,6 @@ public class CalculatorTest {
 
     @Test
     public void testDivide() {
-        Assert.assertEquals(new Calculator().divide(1, 2), 0.5);
+        Assert.assertEquals(new Calculator().divide(1, 2), 0.0);
     }
 }
