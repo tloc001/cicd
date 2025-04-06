@@ -30,11 +30,11 @@ jobs:
         shell: bash
         run: cat target/surefire-reports/*.txt || echo "No test result found"
 
-      - name: Show test result (PowerShell fallback)
-        shell: pwsh
+      - name: Show test result
+        shell: bash
         run: |
-          if (Test-Path "target/surefire-reports") {
-            Get-Content target/surefire-reports/*.txt
-          } else {
-            Write-Output "No test result found"
-          }
+          if [ -d target/surefire-reports ]; then
+            cat target/surefire-reports/*.txt || echo "Test report exists but no content"
+          else
+            echo "No test result found"
+          fi
