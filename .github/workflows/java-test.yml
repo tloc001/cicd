@@ -25,3 +25,5 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean verify
+      - name: Show test result (text)
+        run: cat target/surefire-reports/*.txt || echo "No test result found"
