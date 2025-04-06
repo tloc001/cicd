@@ -25,5 +25,16 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean verify
-      - name: Show test result (text)
+
+      - name: Show test result (text fallback)
+        shell: bash
         run: cat target/surefire-reports/*.txt || echo "No test result found"
+
+      - name: Show test result (PowerShell fallback)
+        shell: pwsh
+        run: |
+          if (Test-Path "target/surefire-reports") {
+            Get-Content target/surefire-reports/*.txt
+          } else {
+            Write-Output "No test result found"
+          }
