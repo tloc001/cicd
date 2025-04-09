@@ -25,11 +25,6 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testMultiply3() {
-        Assert.assertEquals(new Calculator().multiply(1, 2), 5);
-    }
-
-    @Test
     public void testDivide() {
         Assert.assertEquals(new Calculator().divide(1, 2), 0.0);
     }
