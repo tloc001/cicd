@@ -18,10 +18,7 @@ public class CalculatorTest {
     public void testMultiply() {
         Assert.assertEquals(new Calculator().multiply(1, 2), 2);
     }
-    @Test
-    public void testMultiply2() {
-        Assert.assertEquals(new Calculator().multiply(1, 2), 8);
-    }
+   
     @Test
     public void testDivide() {
         Assert.assertEquals(new Calculator().divide(1, 2), 0.0);
