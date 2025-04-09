@@ -16,7 +16,7 @@ public class CalculatorTest {
 
     @Test
     public void testMultiply() {
-        Assert.assertEquals(new Calculator().multiply(1, 2), 2);
+        Assert.assertEquals(new Calculator().multiply(1, 2), 66666);
     }
 
     @Test
